@@ -1,41 +1,44 @@
 package guru.springframeworks.springrestclient.api.domain;
 
 import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
 
 public class User implements Serializable {
-    private String gender;
-    private Name name;
-    private Location location;
+    private Long id;
+    private String name;
+    private String username;
     private String email;
+    private Address address;
     private String phone;
-    private Job job;
-    private Billing billing;
-    private String language;
-    private String currency;
-    private Login login;
+    private String website;
+    private Company company;
+    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    public String getGender() {
-        return gender;
+    private final static long serialVersionUID = 270727596527329664L;
+
+    public Long getId() {
+        return id;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public Name getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(Name name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public Location getLocation() {
-        return location;
+    public String getUsername() {
+        return username;
     }
 
-    public void setLocation(Location location) {
-        this.location = location;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getEmail() {
@@ -46,6 +49,14 @@ public class User implements Serializable {
         this.email = email;
     }
 
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
     public String getPhone() {
         return phone;
     }
@@ -54,43 +65,27 @@ public class User implements Serializable {
         this.phone = phone;
     }
 
-    public Job getJob() {
-        return job;
+    public String getWebsite() {
+        return website;
     }
 
-    public void setJob(Job job) {
-        this.job = job;
+    public void setWebsite(String website) {
+        this.website = website;
     }
 
-    public Billing getBilling() {
-        return billing;
+    public Company getCompany() {
+        return company;
     }
 
-    public void setBilling(Billing billing) {
-        this.billing = billing;
+    public void setCompany(Company company) {
+        this.company = company;
     }
 
-    public String getLanguage() {
-        return language;
+    public Map<String, Object> getAdditionalProperties() {
+        return additionalProperties;
     }
 
-    public void setLanguage(String language) {
-        this.language = language;
-    }
-
-    public String getCurrency() {
-        return currency;
-    }
-
-    public void setCurrency(String currency) {
-        this.currency = currency;
-    }
-
-    public Login getLogin() {
-        return login;
-    }
-
-    public void setLogin(Login login) {
-        this.login = login;
+    public void setAdditionalProperties(Map<String, Object> additionalProperties) {
+        this.additionalProperties = additionalProperties;
     }
 }
