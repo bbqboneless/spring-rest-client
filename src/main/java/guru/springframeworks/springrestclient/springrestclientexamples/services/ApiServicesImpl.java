@@ -1,10 +1,15 @@
 package guru.springframeworks.springrestclient.springrestclientexamples.services;
 
 import guru.springframeworks.springrestclient.api.domain.User;
+import guru.springframeworks.springrestclient.api.domain.UserData;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.util.UriComponentsBuilder;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 import java.util.List;
 @Service
